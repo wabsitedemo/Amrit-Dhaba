@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amrit Dhaba - Shimla's Favorite Pure Veg Punjabi Dhaba</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="icon" type="image/jpeg" href="assets/branding/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        saffron: '#FF9933',
+        forest: '#228B22',
+        sunny: '#FFCC00',
+        cream: '#F8F1E3',
+        darkgreen: '#1a5c1a'
+      },
+      fontFamily: {
+        display: ['Tilt Warp', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+  <style>
+html { scroll-behavior: smooth; }
+.menu-tab.active { background: #FF9933; color: white; }
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+@keyframes steam {
+  0% { transform: translateY(0) scaleX(1); opacity: 0.7; }
+  50% { transform: translateY(-12px) scaleX(1.2); opacity: 0.4; }
+  100% { transform: translateY(-24px) scaleX(0.8); opacity: 0; }
+}
+.steam-line { animation: steam 2s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+.float-anim { animation: float 3s ease-in-out infinite; }
+.stat-card { transition: transform 0.2s; }
+.stat-card:hover { transform: translateY(-4px); }
+.brand-logo { width: 44px; height: 44px; object-fit: cover; border-radius: 9999px; }
+.hero-banner { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16); }
+.menu-card-image { width: 100%; height: 220px; object-fit: cover; }
+.gallery-thumb { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
+.gallery-item:hover .gallery-thumb { transform: scale(1.05); }
+.location-photo { width: 100%; height: 100%; object-fit: cover; }
+</style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body bg-cream text-gray-800">
+  <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Sticky Nav -->
+   <nav id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"><a href="#hero" class="flex items-center gap-3"> <img src="assets/branding/logo.jpg" alt="Amrit Dhaba logo" class="brand-logo border-2 border-orange-200 shadow-sm"> <div><p data-dhaba-name class="font-display text-saffron text-xl">Amrit Dhaba</p><p class="text-[10px] font-bold uppercase tracking-[0.25em] text-forest">Pure Veg Punjabi Dhaba</p></div> </a> <button id="mobile-menu-btn" class="md:hidden text-forest"><i data-lucide="menu" class="w-6 h-6"></i></button>
+     <div class="hidden md:flex gap-6 text-sm font-semibold"><a href="#hero" class="text-forest hover:text-saffron transition">Home</a> <a href="#story" class="text-forest hover:text-saffron transition">Our Story</a> <a href="#menu" class="text-forest hover:text-saffron transition">Menu</a> <a href="#gallery" class="text-forest hover:text-saffron transition">Gallery</a> <a href="#location" class="text-forest hover:text-saffron transition">Location</a> <a href="#contact" class="text-forest hover:text-saffron transition">Contact</a>
+     </div>
+    </div>
+    <div id="mobile-nav" class="hidden md:hidden bg-white border-t px-4 pb-4 space-y-3"><a href="#hero" class="block text-forest font-semibold py-1">Home</a> <a href="#story" class="block text-forest font-semibold py-1">Our Story</a> <a href="#menu" class="block text-forest font-semibold py-1">Menu</a> <a href="#gallery" class="block text-forest font-semibold py-1">Gallery</a> <a href="#location" class="block text-forest font-semibold py-1">Location</a> <a href="#contact" class="block text-forest font-semibold py-1">Contact</a>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="hero" class="relative w-full overflow-hidden" style="background: linear-gradient(135deg, #FF9933 0%, #e88529 40%, #228B22 100%);">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 80%, #FFCC00 1px, transparent 1px), radial-gradient(circle at 80% 20%, #fff 1px, transparent 1px); background-size: 40px 40px;"></div><!-- Decorative SVG mountains -->
+    <svg class="absolute bottom-0 left-0 w-full" viewbox="0 0 1440 120" fill="none" preserveaspectratio="none" style="height:60px;"><path d="M0,120 L0,80 Q180,20 360,60 Q540,100 720,40 Q900,0 1080,50 Q1260,90 1440,30 L1440,120Z" fill="#F8F1E3" opacity="0.6" /> <path d="M0,120 L0,90 Q200,50 400,75 Q600,100 800,55 Q1000,30 1200,70 Q1350,95 1440,60 L1440,120Z" fill="#F8F1E3" />
+    </svg>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-16 md:py-24 text-center">
+     <div class="relative mx-auto mb-8 max-w-3xl overflow-hidden rounded-3xl border-4 border-white/25 hero-banner">
+      <img src="assets/hero/hero-banner.jpg" alt="Amrit Dhaba hero banner" class="h-64 w-full object-cover md:h-80">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"></div>
+      <div class="absolute left-4 top-4 flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 shadow-lg">
+       <img src="assets/branding/logo.jpg" alt="Amrit Dhaba logo" class="h-10 w-10 rounded-full object-cover">
+       <div class="text-left">
+         <p data-dhaba-name class="font-display text-saffron text-lg">Amrit Dhaba</p>
+        <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-forest">Shimla Favorite</p>
+       </div>
+      </div>
+     </div>
+     <h1 id="hero-title" class="font-display text-5xl md:text-7xl text-white drop-shadow-lg mb-3">Amrit Dhaba</h1>
+     <p id="hero-tagline" class="text-white/90 text-base md:text-xl font-medium mb-8 max-w-lg mx-auto">Pure Vegetarian Punjabi Dhaba - Home-style Cooking - Shimla</p>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="#menu" class="bg-saffron hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition transform hover:scale-105 flex items-center justify-center gap-2"> <i data-lucide="utensils" class="w-5 h-5"></i> View Menu </a> <a href="tel:9805663556" data-phone-link class="bg-forest hover:bg-darkgreen text-white font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition transform hover:scale-105 flex items-center justify-center gap-2"> <i data-lucide="phone" class="w-5 h-5"></i> <span id="hero-phone-text">Call / WhatsApp (9805663556)</span> </a>
+     </div>
+    </div>
+   </section><!-- Our Story -->
+   <section id="story" class="py-16 md:py-20 px-4 bg-cream">
+    <div class="max-w-5xl mx-auto text-center">
+     <p class="text-saffron font-bold text-sm tracking-widest uppercase mb-2">Since Generations</p>
+     <h2 id="story-heading" class="font-display text-3xl md:text-5xl text-saffron mb-4">Shimla's Favorite Pure Veg Dhaba</h2>
+     <p id="story-desc" class="text-gray-600 max-w-2xl mx-auto mb-8 text-base md:text-lg leading-relaxed">Budget-friendly, no-frills pure vegetarian eatery famous for authentic Punjabi home-style cooking and quick service near Old Bus Stand, Shimla.</p><!-- Highlights -->
+     <div class="flex flex-wrap justify-center gap-3 mb-10"><span class="bg-green-100 text-forest font-semibold px-4 py-2 rounded-full text-sm flex items-center gap-1"><i data-lucide="leaf" class="w-4 h-4"></i> Strictly Pure Vegetarian</span> <span class="bg-yellow-100 text-yellow-700 font-semibold px-4 py-2 rounded-full text-sm flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> Jain Options Available</span> <span class="bg-orange-100 text-saffron font-semibold px-4 py-2 rounded-full text-sm flex items-center gap-1"><i data-lucide="heart" class="w-4 h-4"></i> No Onion-Garlic Options</span> <span class="bg-green-100 text-forest font-semibold px-4 py-2 rounded-full text-sm flex items-center gap-1"><i data-lucide="indian-rupee" class="w-4 h-4"></i> Fresh &amp; Affordable</span>
+     </div><!-- Stat Cards -->
+     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+      <div class="stat-card bg-white rounded-2xl p-6 shadow-md border border-orange-100">
+       <div class="text-3xl mb-2">
+        💰
+       </div>
+       <p class="font-display text-2xl text-saffron">₹200–450</p>
+       <p class="text-gray-500 text-sm">for two people</p>
+      </div>
+      <div class="stat-card bg-white rounded-2xl p-6 shadow-md border border-green-100">
+       <div class="text-3xl mb-2">
+        🕐
+       </div>
+       <p class="font-display text-2xl text-forest">7 AM – 11:55 PM</p>
+       <p class="text-gray-500 text-sm">Open Daily</p>
+      </div>
+      <div class="stat-card bg-white rounded-2xl p-6 shadow-md border border-yellow-100">
+       <div class="text-3xl mb-2">
+        ⚡
+       </div>
+       <p class="font-display text-2xl text-yellow-600">Fast Service</p>
+       <p class="text-gray-500 text-sm">Quick &amp; Efficient</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Menu Highlights -->
+   <section id="menu" class="py-16 md:py-20 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-10">
+      <p class="text-forest font-bold text-sm tracking-widest uppercase mb-2">What We Serve</p>
+      <h2 class="font-display text-3xl md:text-5xl text-saffron mb-4">Our Signature Dishes &amp; Menu</h2>
+     </div><!-- Menu Tabs -->
+     <div class="flex flex-wrap justify-center gap-2 mb-8"><button class="menu-tab active px-5 py-2 rounded-full font-semibold text-sm border-2 border-saffron transition" data-tab="all">All Items</button> <button class="menu-tab px-5 py-2 rounded-full font-semibold text-sm border-2 border-saffron text-saffron bg-white transition" data-tab="thali">Deluxe Thali</button> <button class="menu-tab px-5 py-2 rounded-full font-semibold text-sm border-2 border-saffron text-saffron bg-white transition" data-tab="breakfast">Breakfast</button> <button class="menu-tab px-5 py-2 rounded-full font-semibold text-sm border-2 border-saffron text-saffron bg-white transition" data-tab="main">Main Course</button> <button class="menu-tab px-5 py-2 rounded-full font-semibold text-sm border-2 border-saffron text-saffron bg-white transition" data-tab="beverages">Beverages</button>
+     </div><!-- Menu Grid -->
+     <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+     </div>
+     <p class="text-center text-gray-500 mt-8 text-sm italic"><i data-lucide="info" class="w-4 h-4 inline mr-1"></i> Jain options available • Rotational menu – items may vary daily</p>
+    </div>
+   </section><!-- Gallery -->
+   <section id="gallery" class="py-16 md:py-20 px-4 bg-cream">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-10">
+      <p class="text-forest font-bold text-sm tracking-widest uppercase mb-2">Visual Treat</p>
+      <h2 class="font-display text-3xl md:text-5xl text-saffron">A Feast for the Eyes</h2>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4" id="gallery-grid">
+     </div>
+    </div>
+   </section><!-- Why Choose Us -->
+   <section id="why" class="py-16 md:py-20 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-10">
+      <p class="text-forest font-bold text-sm tracking-widest uppercase mb-2">Loved by Thousands</p>
+      <h2 class="font-display text-3xl md:text-5xl text-saffron">What Our Customers Love</h2>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div class="bg-cream rounded-2xl p-6 border border-orange-100 flex gap-4 items-start">
+       <div class="text-3xl flex-shrink-0">
+        ⭐
+       </div>
+       <div>
+        <p class="font-bold text-gray-800 mb-1">"Best value thali in Shimla!"</p>
+        <p class="text-gray-500 text-sm">— Regular Customer</p>
+       </div>
+      </div>
+      <div class="bg-cream rounded-2xl p-6 border border-green-100 flex gap-4 items-start">
+       <div class="text-3xl flex-shrink-0">
+        🚌
+       </div>
+       <div>
+        <p class="font-bold text-gray-800 mb-1">"Super fast service near bus stand"</p>
+        <p class="text-gray-500 text-sm">— Traveler</p>
+       </div>
+      </div>
+      <div class="bg-cream rounded-2xl p-6 border border-orange-100 flex gap-4 items-start">
+       <div class="text-3xl flex-shrink-0">
+        😋
+       </div>
+       <div>
+        <p class="font-bold text-gray-800 mb-1">"Authentic Punjabi taste at budget price"</p>
+        <p class="text-gray-500 text-sm">— Food Blogger</p>
+       </div>
+      </div>
+      <div class="bg-cream rounded-2xl p-6 border border-green-100 flex gap-4 items-start">
+       <div class="text-3xl flex-shrink-0">
+        🌱
+       </div>
+       <div>
+        <p class="font-bold text-gray-800 mb-1">"Jain food options available!"</p>
+        <p class="text-gray-500 text-sm">— Jain Community</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Visitor Tips -->
+   <section class="py-16 md:py-20 px-4" style="background: linear-gradient(135deg, #228B22 0%, #1a6e1a 100%);">
+    <div class="max-w-3xl mx-auto text-center">
+     <h2 class="font-display text-3xl md:text-4xl text-white mb-8">Tips Before You Visit</h2>
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+      <div class="bg-white/15 backdrop-blur rounded-xl p-5 flex gap-3 items-start"><i data-lucide="clock" class="w-6 h-6 text-sunny flex-shrink-0 mt-0.5"></i>
+       <p class="text-white/95 font-medium">Peak hours on weekends 12–2 PM &amp; 7–9 PM – come early!</p>
+      </div>
+      <div class="bg-white/15 backdrop-blur rounded-xl p-5 flex gap-3 items-start"><i data-lucide="bus" class="w-6 h-6 text-sunny flex-shrink-0 mt-0.5"></i>
+       <p class="text-white/95 font-medium">Perfect stop for bus travelers near Old Bus Stand</p>
+      </div>
+      <div class="bg-white/15 backdrop-blur rounded-xl p-5 flex gap-3 items-start"><i data-lucide="package" class="w-6 h-6 text-sunny flex-shrink-0 mt-0.5"></i>
+       <p class="text-white/95 font-medium">Dine-in, Takeaway &amp; Delivery all available</p>
+      </div>
+      <div class="bg-white/15 backdrop-blur rounded-xl p-5 flex gap-3 items-start"><i data-lucide="users" class="w-6 h-6 text-sunny flex-shrink-0 mt-0.5"></i>
+       <p class="text-white/95 font-medium">Casual, family-friendly atmosphere for all ages</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Location -->
+   <section id="location" class="py-16 md:py-20 px-4 bg-cream">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-10">
+      <p class="text-forest font-bold text-sm tracking-widest uppercase mb-2">Visit Us</p>
+      <h2 class="font-display text-3xl md:text-5xl text-saffron mb-4">Find Us - Our Location</h2>
+      <p class="text-gray-600 text-lg max-w-xl mx-auto">Old Bus Stand, Cart Road, Bemloi, Shimla, Himachal Pradesh 171001</p>
+     </div>
+     <div class="max-w-3xl mx-auto mb-8 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+      <div class="relative h-72 md:h-96">
+       <img src="assets/location/location-photo.jpg" alt="Amrit Dhaba location" class="location-photo">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+       <div class="absolute left-4 bottom-4 text-left text-white">
+         <p data-dhaba-name class="font-display text-2xl">Amrit Dhaba</p>
+        <p class="text-sm text-white/85">Old Bus Stand, Shimla</p>
+       </div>
+      </div>
+     </div>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center"><a href="https://share.google/wKQefzFTiNCnrZyOz" target="_blank" rel="noopener noreferrer" class="bg-forest hover:bg-darkgreen text-white font-bold py-3 px-8 rounded-xl shadow-lg transition flex items-center gap-2"> <i data-lucide="navigation" class="w-5 h-5"></i> Open Shared Location </a>
+      <div class="bg-white rounded-xl px-6 py-3 shadow border border-green-100 flex items-center gap-2"><i data-lucide="clock" class="w-5 h-5 text-forest"></i> <span class="font-semibold text-gray-700">Open Daily: 7:00 AM - 11:55 PM</span>
+       </div>
+      </div>
+    </div>
+   </section><!-- Contact / Footer -->
+    <section id="contact" class="py-16 md:py-20 px-4 bg-white">
+     <div class="max-w-3xl mx-auto text-center">
+      <img src="assets/branding/logo.jpg" alt="Amrit Dhaba logo" class="mx-auto mb-4 h-20 w-20 rounded-full object-cover border-4 border-orange-100 shadow-md">
+      <h2 class="font-display text-3xl md:text-5xl text-saffron mb-6">Contact Us</h2><a href="tel:9805663556" data-phone-link class="inline-flex items-center gap-3 bg-forest hover:bg-darkgreen text-white font-bold py-4 px-10 rounded-2xl text-xl shadow-lg transition transform hover:scale-105 mb-4"> <i data-lucide="phone" class="w-6 h-6"></i> <span id="contact-phone">9805663556</span> </a>
+     <p class="text-gray-500 mb-2">WhatsApp also available on the same number</p>
+     <p class="text-gray-600 font-semibold">Average cost: ₹200–450 for two</p>
+     <p class="text-gray-500 mt-2 text-sm">Old Bus Stand, Cart Road, Bemloi, Shimla, HP 171001</p>
+    </div>
+   </section>
+   <footer class="bg-darkgreen text-white py-10 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+       <div class="text-center md:text-left flex items-center gap-3">
+        <img src="assets/branding/logo.jpg" alt="Amrit Dhaba logo" class="h-12 w-12 rounded-full object-cover border border-white/20">
+        <div>
+         <p data-dhaba-name class="font-display text-2xl mb-1">Amrit Dhaba</p>
+         <p id="footer-tagline-text" class="text-white/70 text-sm">Pure Vegetarian - Punjabi Flavors - Since Generations</p>
+        </div>
+       </div>
+      <div class="flex gap-6 text-sm text-white/80"><a href="#hero" class="hover:text-sunny transition">Home</a> <a href="#menu" class="hover:text-sunny transition">Menu</a> <a href="#story" class="hover:text-sunny transition">Our Story</a> <a href="#location" class="hover:text-sunny transition">Location</a> <a href="#contact" class="hover:text-sunny transition">Contact</a>
+      </div>
+     </div>
+      <div class="border-t border-white/20 mt-6 pt-6 text-center text-white/50 text-xs">
+       &copy; 2026 Amrit Dhaba, Shimla. All rights reserved. Made with fresh visuals and lots of ghee.
+      </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+// Menu data
+const menuItems = [
+  { name: "Deluxe Thali", price: "₹160", desc: "Dal Makhani, Shahi Paneer, Mix Veg, Raita, Rice, Roti, Papad", cat: "thali", image: "assets/menu/deluxe-thali.jpg" },
+  { name: "Aloo / Paneer / Gobi Paratha", price: "₹60-90", desc: "Stuffed parathas served with curd, butter & pickle", cat: "breakfast", image: "assets/menu/paratha.jpg" },
+  { name: "Dal Makhani", price: "₹120", desc: "Slow-cooked black lentils in creamy butter gravy", cat: "main", image: "assets/menu/dal-makhani.jpg" },
+  { name: "Kadhai Paneer", price: "₹140", desc: "Cottage cheese in spicy bell pepper gravy", cat: "main", image: "assets/menu/kadhai-paneer.jpg" },
+  { name: "Matar Paneer / Malai Kofta", price: "₹130", desc: "Rich Punjabi curries with fresh cream", cat: "main", image: "assets/menu/matar-paneer-malai-kofta.jpg" },
+  { name: "Masala Chai / Lassi", price: "₹20-40", desc: "Hot masala tea or thick sweet lassi - Shimla style", cat: "beverages", image: "assets/menu/masala-chai-lassi.jpg" }
+];
+
+function renderMenu(filter = 'all') {
+  const grid = document.getElementById('menu-grid');
+  grid.innerHTML = '';
+  const items = filter === 'all' ? menuItems : menuItems.filter(i => i.cat === filter);
+  items.forEach((item) => {
+    const card = document.createElement('div');
+    card.className = 'bg-white rounded-2xl overflow-hidden shadow-md border border-orange-100 hover:shadow-xl transition-all duration-300';
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" class="menu-card-image">
+      <div class="p-6">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <h3 class="font-display text-lg text-gray-800">${item.name}</h3>
+          <p class="text-saffron font-bold text-lg shrink-0">${item.price}</p>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">${item.desc}</p>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// Menu tabs
+document.querySelectorAll('.menu-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.menu-tab').forEach(b => { b.classList.remove('active'); b.classList.add('text-saffron', 'bg-white'); });
+    btn.classList.add('active'); btn.classList.remove('text-saffron', 'bg-white');
+    renderMenu(btn.dataset.tab);
+  });
+});
+
+// Gallery
+const galleryItems = [
+  { image: "assets/gallery/hot-masala-chai.jpg", label: "Hot Masala Chai" },
+  { image: "assets/gallery/our-dhaba.jpg", label: "Our Dhaba" },
+  { image: "assets/gallery/sweet-lassi.jpg", label: "Sweet Lassi" },
+  { image: "assets/gallery/happy-customers.jpg", label: "Happy Customers" }
+];
+
+const gGrid = document.getElementById('gallery-grid');
+galleryItems.forEach(g => {
+  const div = document.createElement('div');
+  div.className = 'gallery-item relative rounded-xl aspect-square overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer';
+  div.innerHTML = `
+    <img src="${g.image}" alt="${g.label}" class="gallery-thumb">
+    <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 p-4">
+      <p class="text-white font-semibold text-xs md:text-sm">${g.label}</p>
+    </div>
+  `;
+  gGrid.appendChild(div);
+});
+
+// Mobile nav
+document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+  document.getElementById('mobile-nav').classList.toggle('hidden');
+});
+document.querySelectorAll('#mobile-nav a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobile-nav').classList.add('hidden'));
+});
+
+// Render initial
+renderMenu();
+lucide.createIcons();
+
+// Element SDK
+const defaultConfig = {
+  dhaba_name: 'Amrit Dhaba',
+  tagline: 'Pure Vegetarian Punjabi Dhaba - Home-style Cooking - Shimla',
+  phone_number: '9805663556',
+  story_heading: "Shimla's Favorite Pure Veg Dhaba",
+  story_description: 'Budget-friendly, no-frills pure vegetarian eatery famous for authentic Punjabi home-style cooking and quick service near Old Bus Stand, Shimla.',
+  footer_tagline: 'Pure Vegetarian - Punjabi Flavors - Since Generations',
+  background_color: '#F8F1E3',
+  surface_color: '#FFFFFF',
+  text_color: '#1f2937',
+  primary_action_color: '#FF9933',
+  secondary_action_color: '#228B22',
+  font_family: 'Tilt Warp',
+  font_size: 16
+};
+
+function applyConfig(config) {
+  const c = { ...defaultConfig, ...config };
+  document.querySelectorAll('[data-dhaba-name]').forEach(el => el.textContent = c.dhaba_name);
+  document.getElementById('hero-title').textContent = c.dhaba_name;
+  document.getElementById('hero-tagline').textContent = c.tagline;
+  document.getElementById('hero-phone-text').textContent = `Call / WhatsApp (${c.phone_number})`;
+  document.getElementById('story-heading').textContent = c.story_heading;
+  document.getElementById('story-desc').textContent = c.story_description;
+  document.getElementById('footer-tagline-text').textContent = c.footer_tagline;
+  document.getElementById('contact-phone').textContent = c.phone_number;
+  document.querySelectorAll('[data-phone-link]').forEach(el => el.href = `tel:${c.phone_number}`);
+
+  // Colors
+  document.body.style.backgroundColor = c.background_color;
+  document.querySelectorAll('.bg-cream').forEach(el => el.style.backgroundColor = c.background_color);
+  document.querySelectorAll('.bg-white').forEach(el => el.style.backgroundColor = c.surface_color);
+  document.body.style.color = c.text_color;
+
+  // Fonts
+  const font = c.font_family || defaultConfig.font_family;
+  document.querySelectorAll('.font-display').forEach(el => el.style.fontFamily = `${font}, sans-serif`);
+  const base = c.font_size || defaultConfig.font_size;
+  document.body.style.fontSize = `${base}px`;
+}
+
+function makeRecolorable(key) {
+  return {
+    get: () => (window.elementSdk.config && window.elementSdk.config[key]) || defaultConfig[key],
+    set: (v) => { window.elementSdk.setConfig({ [key]: v }); }
+  };
+}
+
+window.elementSdk.init({
+  defaultConfig,
+  onConfigChange: async (config) => applyConfig(config),
+  mapToCapabilities: (config) => ({
+    recolorables: [
+      makeRecolorable('background_color'),
+      makeRecolorable('surface_color'),
+      makeRecolorable('text_color'),
+      makeRecolorable('primary_action_color'),
+      makeRecolorable('secondary_action_color')
+    ],
+    borderables: [],
+    fontEditable: {
+      get: () => (config && config.font_family) || defaultConfig.font_family,
+      set: (v) => window.elementSdk.setConfig({ font_family: v })
+    },
+    fontSizeable: {
+      get: () => (config && config.font_size) || defaultConfig.font_size,
+      set: (v) => window.elementSdk.setConfig({ font_size: v })
+    }
+  }),
+  mapToEditPanelValues: (config) => new Map([
+    ['dhaba_name', (config && config.dhaba_name) || defaultConfig.dhaba_name],
+    ['tagline', (config && config.tagline) || defaultConfig.tagline],
+    ['phone_number', (config && config.phone_number) || defaultConfig.phone_number],
+    ['story_heading', (config && config.story_heading) || defaultConfig.story_heading],
+    ['story_description', (config && config.story_description) || defaultConfig.story_description],
+    ['footer_tagline', (config && config.footer_tagline) || defaultConfig.footer_tagline]
+  ])
+});
+</script>
+ </body>
+</html>
